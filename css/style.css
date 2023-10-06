@@ -10,6 +10,9 @@
 body {
     font-family: Barlow, sans-serif;
     font-size: 13px;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-color: var(--light-grayish-blue);
 }
 
 :root {
@@ -17,10 +20,40 @@ body {
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --very-dark-blackish-blue: hsl(219, 29%, 14%);
     --white: hsl(0, 0%, 100%);
+    --white-position: hsla(0, 0%, 100%, .5);
+    --white-paragraph: hsla(0, 0%, 100%, .75);
     --light-gray: hsl(0, 0%, 81%);
-    --light-grayish-blue: hsl(210, 46%, 95%);
- }
+    --light-gray-position: hsla(0, 0%, 81%, .75);
+    --light-gray-paragraph: hsla(0, 0%, 81%, .5);
+    --light-grayish-blue: hsl(210, 46%, 95%);  
+    --fw-400: 500;
+    --fw-700: 600;
+   }
 
 /* Typography */
 
+h2 {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    color: var(--very-dark-blackish-blue);
+    line-height: 1.2;
+}
 
+p {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: var(--very-dark-grayish-blue);
+    line-height: 1.5;
+}
+
+/* Layout */
+
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
