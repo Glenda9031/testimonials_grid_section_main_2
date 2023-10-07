@@ -8,72 +8,77 @@
 }
 
 body {
-    font-family: Barlow, sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 13px;
+    font-weight: 500;
+/*    color: var(--white-color);*/
     line-height: 1.5;
     min-height: 100vh;
-    background-color: var(--light-grayish-blue);
+/*    background-color: var(--bg-color);*/
+    margin: 0;
 }
 
 :root {
-    --moderate-violet: hsl(263, 55%, 52%);
-    --very-dark-grayish-blue: hsl(217, 19%, 35%);
-    --very-dark-blackish-blue: hsl(219, 29%, 14%);
-    --white: hsl(0, 0%, 100%);
-    --white-position: hsla(0, 0%, 100%, .5);
-    --white-paragraph: hsla(0, 0%, 100%, .75);
-    --light-gray: hsl(0, 0%, 81%);
-    --light-gray-position: hsla(0, 0%, 81%, .75);
-    --light-gray-paragraph: hsla(0, 0%, 81%, .5);
-    --light-grayish-blue: hsl(210, 46%, 95%);  
-    --fw-400: 500;
-    --fw-700: 600;
+    --bg-color: #ECF2F8;
+    --white-color: #fff;
+    --primary-color: #733FC8;
+    --primary-accent-color: #A775F1;
+    --secondary-color: #48556A;
+    --tertiary-color: #19202D;
+    --lightest-gray-color: #CFCFCF;
    }
 
 /* Typography */
 
-h2 {
-    font-size: var(--fs-500);
-    font-weight: var(--fw-700);
-    color: var(--very-dark-blackish-blue);
-    line-height: 1.2;
-}
-
-p {
-    font-size: var(--fs-400);
-    font-weight: var(--fw-400);
-    color: var(--very-dark-grayish-blue);
-    line-height: 1.5;
-}
-
-/* Layout */
-
-.testimonial-grid {
+.container {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "img card_name card_title"
+    "card_main-quote card_main-quote card_main-quote card_main-quote"
+    "card_testimonial card_testimonial card_testimonial card_testimonial";
 }
 
 .grid-col-span-2 {
     grid-column: span 2;
 }
 
-.testimonial:last-child {
+.card:last-child {
     grid-column: 4;
     grid-row: 1 / span 2;
 }
 
-@media screen and (max-width: 23.4375rem) {
-
-    .testimonial-grid {
-        display: grid;
-        gap: 1.5rem;
-    }
+img {
+    grid-area: img;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
 }
-    
 
+.card_name {
+    grid-area: card_name;
+}
 
+.card_title {
+    grid-area: card_title;
+    margin-bottom: 1.5rem;
+}
 
+.card_main-quote {
+    grid-area: card_main-quote;
+    margin-bottom: 1.5rem;
+}
 
+.card_testimonial {
+    grid-area: card_testimonial;
+    margin-bottom: 1.5rem;
+}
 
+/* Individual Card Styling */
 
+.card1 {
+    background-color: var(--primary-color);
+}
