@@ -58,8 +58,24 @@ img {
     border: 2px solid var(--primary-color);
 }
 
+.card {
+    border-radius: 10px;
+    padding: 1.5rem;
+    line-height: 1.7;
+}
 .card_name {
     grid-area: card_name;
+}
+
+.card1 .card_name,
+.card2 .card_name,
+.card4 .card_name {
+    color: var(--bg-color);
+}
+
+.card3 .card_name,
+.card5 .card_name {
+    color: var(--lightest-gray-color);
 }
 
 .card_title {
@@ -67,9 +83,33 @@ img {
     margin-bottom: 1.5rem;
 }
 
+.card1 .card_title,
+.card2 .card_title,
+.card4 .card_title {
+    color: var(--bg-color);
+}
+
+.card3 .card_title,
+.card5 .card_title {
+    color: var(--lightest-gray-color);
+}
+
 .card_main-quote {
     grid-area: card_main-quote;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.card1 .card_main-quote,
+.card2 .card_main-quote,
+.card4 .card_main-quote {
+    color: var(--bg-color);
+    font-size: .90rem;
+}
+
+.card3 .card_main-quote,
+.card5 .card_main-quote {
+    color: var(--lightest-gray-color);
+    font-size: .90rem;
 }
 
 .card_testimonial {
@@ -77,8 +117,38 @@ img {
     margin-bottom: 1.5rem;
 }
 
+.card1 .card_testimonial,
+.card2 .card_testimonial,
+.card4 .card_testimonial {
+    color: var(--bg-color);
+    font-size: .75rem;
+}
+
+.card3 .card_testimonial,
+.card5 .card_testimonial {
+    color: var(--lightest-gray-color);
+    font-size: .75rem;
+}
+
 /* Individual Card Styling */
 
 .card1 {
     background-color: var(--primary-color);
 }
+
+.card2 {
+    background-color: var(--secondary-color);
+}
+
+.card3 {
+    background-color: var(--tertiary-color);
+}
+
+.card4 {
+    background-color: var(--primary-accent-color);
+}
+
+.card5 {
+    background-color: var(--tertiary-color);
+}
+
