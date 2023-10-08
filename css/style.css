@@ -33,6 +33,7 @@ body {
 .container {
     display: grid;
     gap: 1.5rem;
+    margin-bottom: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     "img card_name card_title"
@@ -61,10 +62,11 @@ img {
 .card {
     border-radius: 10px;
     padding: 1.5rem;
-    line-height: 1.7;
+    line-height: 1.2;
 }
 .card_name {
     grid-area: card_name;
+    
 }
 
 .card1 .card_name,
@@ -97,6 +99,7 @@ img {
 .card_main-quote {
     grid-area: card_main-quote;
     margin-bottom: 1.2rem;
+    line-height: 1.7;
 }
 
 .card1 .card_main-quote,
@@ -115,19 +118,20 @@ img {
 .card_testimonial {
     grid-area: card_testimonial;
     margin-bottom: 1.5rem;
+    line-height: 1.7;
 }
 
 .card1 .card_testimonial,
 .card2 .card_testimonial,
 .card4 .card_testimonial {
     color: var(--bg-color);
-    font-size: .75rem;
+    font-size: .77rem;
 }
 
 .card3 .card_testimonial,
 .card5 .card_testimonial {
     color: var(--lightest-gray-color);
-    font-size: .75rem;
+    font-size: .77rem;
 }
 
 /* Individual Card Styling */
@@ -141,14 +145,28 @@ img {
 }
 
 .card3 {
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    color: #000;
 }
 
 .card4 {
-    background-color: var(--primary-accent-color);
+    background-color: var(--tertiary-color);
 }
 
 .card5 {
-    background-color: var(--tertiary-color);
+    background-color: var(--primary-accent-color);
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "img card_name card_title"
+        "card_main-quote"
+        "card_testimonial";
+    }
 }
 
